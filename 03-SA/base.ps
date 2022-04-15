@@ -1,0 +1,87 @@
+%!PS-Adobe-3.0
+<< /PageSize [595 842] >> setpagedevice
+/drop {pop} def
+/swap {exch} def
+/mm {2.835 mul} def
+/tr {ymin sub deltay add yscale mul swap xmin sub deltax add xscale mul swap} def
+/mt {tr moveto} def
+/lt {tr lineto} def
+/drawFrame {[] 0 setdash 0 setgray 
+  xmin ymax mt xmin ymin lt xmax ymin lt stroke
+} def
+/str 20 string def
+/xcenter {dup stringwidth drop 2 div neg 0 rmoveto} def
+/xright {dup stringwidth drop neg 0 rmoveto} def
+/title {xmin ymin mt 0 -12 mm rmoveto show} def
+
+/xmargin 50 def
+/ymargin 50 def
+/initScaleAndFont {
+  /xscale 595 2 xmargin mul sub xmax xmin sub div def
+  /yscale 842 2 ymargin mul sub ymax ymin sub div def
+  /deltax xmargin xscale div def
+  /deltay ymargin yscale div def
+  1 setlinewidth
+  /Times-Roman findfont 10 scalefont setfont
+} def
+
+/xticks {
+  /nbxticks swap def
+  /xinc xmax xmin sub nbxticks div def
+  0 1 nbxticks {
+    xinc mul xmin add dup ymin mt 0 -3 mm rlineto
+    0 -3 mm rmoveto str cvs xcenter show
+  } for
+} def
+
+/yticks {
+  /nbyticks swap def
+  /yinc ymax ymin sub nbyticks div def
+  0 1 nbyticks {
+    yinc mul ymin add dup xmin swap mt -3 mm 0 rlineto
+    -2 mm 0 rmoveto str cvs xright show
+  } for
+} def
+
+%newpath
+%/xmin 486.6 def
+%/ymin 21687 def
+%/xmax 3991.75 def
+%/ymax 30358 def
+%initScaleAndFont
+%drawFrame stroke
+%5 xticks stroke
+%5 yticks stroke
+%(Title) title
+%3991.75 29308 mt
+%3712.33 28394 lt
+%3452.47 29208 lt
+%3210.79 28597 lt
+%2986.04 27178 lt
+%2777.02 29069 lt
+%2582.63 29506 lt
+%2401.84 30358 lt
+%2233.71 29388 lt
+%2077.35 29881 lt
+%1931.94 28935 lt
+%1796.70 28205 lt
+%1670.93 28760 lt
+%1553.97 27271 lt
+%1445.19 28000 lt
+%1344.03 29809 lt
+%1249.95 26513 lt
+%1162.45 25737 lt
+%1081.08 25934 lt
+%1005.40 25817 lt
+%935.02 25894 lt
+%869.57 24692 lt
+%808.70 24695 lt
+%752.09 23823 lt
+%699.45 25576 lt
+%650.49 24143 lt
+%604.95 27028 lt
+%562.60 25188 lt
+%523.22 23514 lt
+%486.60 21687 lt
+%stroke
+%showpage

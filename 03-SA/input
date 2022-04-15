@@ -1,0 +1,11 @@
+ALPHA = 0.95
+BETA = 1.05
+BETA0 = 0.0001
+MAXTIME = 10000000
+20 queens
+20
+30 queens
+30
+40 queens
+40
+END
